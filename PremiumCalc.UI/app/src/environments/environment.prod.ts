@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: "https://sharedcalcwebapi20200820091420.azurewebsites.net/api"
 };
