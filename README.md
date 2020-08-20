@@ -11,7 +11,7 @@ The web api code is here (https://github.com/S4njay/CodingTest/tree/master/Premi
 
 
 Unit tests can be found here: \
-https://github.com/S4njay/CodingTest/blob/master/PremiumCalc.WebApi.Tests/PremiumCalcControllerTest.cs \
+https://github.com/S4njay/CodingTest/tree/master/PremiumCalc.WebApi.Tests \
 https://github.com/S4njay/CodingTest/blob/master/PremiumCalc.UI/app/src/app/premium-calc.service.spec.ts \
 https://github.com/S4njay/CodingTest/blob/master/PremiumCalc.UI/app/src/app/premium-calc.service.ts
 
