@@ -82,7 +82,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PremiumCalcControllerTest.cs" />
+    <Compile Include="OccupationsControllerTests.cs" />
+    <Compile Include="PremiumCalcControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

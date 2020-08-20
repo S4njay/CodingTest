@@ -7,7 +7,7 @@ using PremiumCalc.WebApi.Models;
 namespace PremiumCalc.WebApi.Tests
 {
     [TestClass]
-    public class ValuesControllerTest
+    public class PremiumCalcControllerTests
     {
 
         [TestMethod]
@@ -26,7 +26,6 @@ namespace PremiumCalc.WebApi.Tests
 
             var mockRepo = new MockRepository(MockBehavior.Strict);
 
-            //var mockPremiumCalcController = mockRepo.Create<PremiumCalcController>();
             var mockOccupationRepository = mockRepo.Create<IOccupationRepository>();
             mockOccupationRepository
                 .Setup(x => x.GetOccupationRatingFactor("Cleaner"))
@@ -37,9 +36,10 @@ namespace PremiumCalc.WebApi.Tests
 
             // Act
             var response = controller.Post(request);
+            
             // Assert
-
-            Assert.AreEqual(540, response.Premium);
+            // 1000 * 1.5 * 30 / 12000 = 3.75
+            Assert.AreEqual(3.75, response.Premium);
         }
     }
 }
