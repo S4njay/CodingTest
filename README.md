@@ -4,7 +4,7 @@ Calculator is available at https://app20200820095724.azurewebsites.net/ \
 Web API is available at https://sharedcalcwebapi20200820091420.azurewebsites.net/api/occupations
 
 ## Design
-Calculator consists of two applications that are deloyed separately. \
+Calculator consists of two applications that are deployed separately. \
 First is a .NET web api built using .NET framework 4.7.2 and Visual studio 2017. \
 Second is an Angular application built with version 10.0.6 and Visual studio code. \
 The web api code is here (https://github.com/S4njay/CodingTest/tree/master/PremiumCalc.WebApi) and the angular app code is here (https://github.com/S4njay/CodingTest/tree/master/PremiumCalc.UI/app)
