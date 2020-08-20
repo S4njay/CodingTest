@@ -1,0 +1,65 @@
+<div class="container" style="margin-top: 70px;">
+    <div class="row">
+        <div class="col-sm-4 offset-sm-2">
+            <div>
+                <h2>Premium Calculator</h2>
+
+                <form [formGroup]="premiumCalcForm" (ngSubmit)="submit()">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" class="form-control" formControlName="name" 
+                        aria-describedby="nameHelp"
+                        placeholder="Name">
+                        <small id="nameHelp" class="form-text text-muted">We'll never share your details with anyone
+                            else.</small>
+                           
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input id="age" type="number" class="form-control" formControlName="age" class="form-control"
+                            aria-describedby="numberHelp" (change)='checkAge()'
+                            placeholder="Age in years. Example: 40...">
+                        <small id="ageHelp" class="form-text text-muted">Please enter your age in completed
+                            years.</small>
+                        <span class="text-danger" *ngIf="this.invalidAge != undefined">
+                            Age should be {{this.invalidAge}} as per Date of Birth</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Date of Birth</label>
+                        <input id="dob" type="text" class="form-control" formControlName="dob" 
+                        aria-describedby="dobHelp" (change)='checkAge()'
+                            placeholder="Select of birth..." onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <small id="dobHelp" class="form-text text-muted">Select using calendar control...</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="occupation">Select your occupation</label>
+                        <select id="occupation" class="form-control" formControlName="occupation" 
+                        aria-describedby="occupationHelp"
+                            placeholder="select..." (change)="submit()">
+                            <option *ngFor="let occ of occupations" [value]="occ">{{occ}}</option>
+                        </select>
+                        <small id="occupationHelp" class="form-text text-muted">Select from the list...</small>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="sumInsured">Sum Insured</label>
+                        <input id="sumInsured" class="form-control" type="number" formControlName="sumInsured"
+                            aria-describedby="sumInsuredHelp" placeholder="0">
+                        <small id="sumInsuredHelp" class="form-text text-muted">Select using calendar control...</small>
+
+                    </div>
+                    <div class="form-group">
+
+                        <button [disabled]="!premiumCalcForm.valid">Submit</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        <div class="col-sm-4 offset-sm-2 result" 
+        [ngClass]="{'alert alert-success': premiumResult!=undefined, 'alert alert-danger' : premiumResult===undefined}">
+            <p>Your monthly premium is</p>
+            <p>{{premiumResult | number:'1.2-2'}}</p>
+        </div>
+    </div>
+</div>

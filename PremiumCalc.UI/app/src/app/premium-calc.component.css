@@ -1,0 +1,12 @@
+.form-group .ng-invalid.ng-touched , .ng-invalid.ng-dirty{ 
+    border-bottom: 3px solid red;
+}
+
+.result {
+    text-align: center;
+    margin: auto;
+}
+
+h2 {
+    color: #80C342;
+}
